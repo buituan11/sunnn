@@ -1,0 +1,102 @@
+.menu-tab{
+	padding-top: 50px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+.slider{ 
+  margin: 0 auto;
+  width: 250px;
+  height: 100px;
+  position: relative;
+  perspective: 800px;
+}
+
+.carousel{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.item {
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 250px;
+  height: 200px;
+  line-height: 200px;
+  font-size: 5em;
+  text-align: center;
+  color: #FFF;
+  border-radius: 10px;
+}
+.a {
+  background: url('https://res.cloudinary.com/buituan/image/upload/v1587337202/Hpbd/IMG_7093.jpg') center center no-repeat;
+  background-size: cover;
+  /* background-color: black; */
+  transform: rotateY(0deg) translateZ(250px);
+}
+.b {
+  background: url('https://res.cloudinary.com/buituan/image/upload/v1587336873/Hpbd/IUEA4041.jpg') center center no-repeat;
+  background-size: cover;
+  transform: rotateY(60deg) translateZ(250px);
+}
+.c {
+  background: url('https://res.cloudinary.com/buituan/image/upload/v1587337500/Hpbd/WOCU8233.jpg') center center no-repeat;
+  background-size: cover;
+  transform: rotateY(120deg) translateZ(250px);
+}
+.d {
+  background: url('https://res.cloudinary.com/buituan/image/upload/v1587337585/Hpbd/IMG_4928.jpg') center center no-repeat;
+  background-size: cover;
+  transform: rotateY(180deg) translateZ(250px);
+}
+.e {
+  background: url('https://res.cloudinary.com/buituan/image/upload/v1587337673/Hpbd/IMG_5086.jpg') center center no-repeat;
+  background-size: cover;
+  transform: rotateY(240deg) translateZ(250px);
+} 
+.button-color{
+  background-color: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.f {
+  background: url('https://res.cloudinary.com/buituan/image/upload/v1587337732/Hpbd/IMG_0142.jpg') center center no-repeat;
+  background-size: cover;
+  transform: rotateY(300deg) translateZ(250px);
+}
+
+.next, .prev {
+  color: #444;
+  position: absolute;
+  padding: 1em 2em;
+  cursor: pointer;
+  background: #CCC;
+  border-radius: 5px;
+  border-top: 1px solid #FFF;
+  box-shadow: 0 5px 0 #999;
+  transition: box-shadow 0.1s, top 0.1s;
+}
+.next:hover, .prev:hover { color: #000; }
+.next:active, .prev:active {
+  top: 254px;
+  box-shadow: 0 1px 0 #999;
+}
+.next { top: 250px; right: 15em; }
+.prev { top: 250px; left: 15em; }
+
+@media screen and (max-width: 768px){
+  .next { top: 330px; right: 1em; }
+  .prev { top: 330px; left: 1em; }  
+  .next:active, .prev:active {
+    top: 334px;
+  }
+}

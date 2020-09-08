@@ -1,0 +1,120 @@
+.profile-tab{
+	padding: 0px auto;
+}
+.aa{
+	width: 800px;
+	position: relative;
+	overflow: hidden;
+}
+.duck{
+	position: absolute;
+	z-index: 999;
+	top: 35%;
+	right: 5%;
+	-webkit-animation-name: jelly;
+  	-webkit-animation-duration: 1s; 
+  	animation-iteration-count: infinite;
+  	animation-name: jelly;
+  	animation-duration: 1s;
+}
+.duck>img{
+	width: 150px;
+	height: 100px;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes duck-ani {
+  0%   {left:-300px; top:0px;}
+  25%  {left:700px; top:0px;}
+  50%  {left:700px; top:150px;}
+  75%  {left: -300px; top:150px;}
+  100% {left:-300px; top:0px; transform: rotateY(180deg);}
+}
+
+/* Standard syntax */
+@keyframes duck-ani {
+   0%   {left:-300px; top:0px;}
+  25%  {left:700px; top:0px;}
+  50%  {left:700px; top:150px;}
+  75%  {left: -300px; top:150px;}
+  100% {left:-300px; top:0px; transform: rotateY(180deg);}
+}
+
+.profile-item{
+	background-color: #FAC9D1;
+	text-align: justify;
+	/*margin: 0px 10em;*/
+	padding-top: 1em;
+	padding-right: 0.9em;
+	padding-left: 1.5em;
+	padding-bottom: 1em;
+	border-radius: 10px;
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+}
+.profile-item>p{
+	font-size: 1.25em;
+}
+.profile-item>ul{
+	list-style-type: circle;
+}
+.profile-item>ul>p{
+	font-size: 1.25em;
+}
+.profile-item>ul>li{
+	/*margin-left: 2em;*/
+	font-size: 1em;
+	text-align: left;
+}
+/* .profile-item>div{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	background-color: #FFD699;
+} */
+.profile-item>#stuff-a{ width: 125px; height: 50px; }
+.profile-item>#stuff-b{ width: 100px; height: 50px; }
+
+.remind{
+	position: absolute;
+	bottom: 2em;
+	right: 1em;
+	width: 50px;
+	height: 50px;
+	font-size: 2em;
+	color: brown;
+	border-radius: 50%;
+	animation: jelly 0.5s;
+ 	animation-iteration-count: infinite;
+}
+
+@keyframes jelly {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+@media screen and (max-width: 768px){
+	.aa{
+		width: 100%;
+	}
+	@keyframes duck-ani {
+	   0%   {left:-300px; top:50px;}
+	  25%  {left:300px; top:50px;}
+	  50%  {left:300px; top:200px;}
+	  75%  {left: -300px; top:200px;}
+	  100% {left:-300px; top:50px; transform: rotateY(180deg);}
+	}
+	.remind{
+		bottom: 3em;
+	}
+}
