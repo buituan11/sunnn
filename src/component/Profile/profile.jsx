@@ -45,7 +45,7 @@ class Profile extends Component {
                     {this.state.ans === 5 &&
                         <div>
                             <div class="alert alert-success" role="alert">
-                                Thật ra không đáp án nào đúng cả <br /> Vì tất cả mọi người đều yêu Thái Hà 	&lt;3 &lt;3 &lt;3 <br /> Đây là lớp bánh đầu tiên. <br /> Ấn và kiểm tra phần Cake xem :3
+                                Thật ra không đáp án nào đúng cả <br /> Vì tất cả mọi người đều yêu Sunn 	&lt;3 &lt;3 &lt;3 <br /> Đây là lớp bánh đầu tiên. <br /> Ấn và kiểm tra phần Cake xem :3
                             </div>
                             <div id={c} onClick={() => this.pushStuff(c)}></div>
                         </div>
